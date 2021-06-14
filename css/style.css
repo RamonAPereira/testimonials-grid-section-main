@@ -1,0 +1,80 @@
+/*Variables*/
+:root {
+  --card-color-one: hsl(263, 55%, 52%);
+  --card-color-two: hsl(217, 19%, 35%);
+  --card-color-three: hsl(219, 29%, 14%);
+  --bg-color: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*resets and body*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--bg-color);
+}
+
+/* Testimonials Section*/
+#testimonials {
+  font-size: 15px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  width: 95vw;
+  margin: 8vh auto 0 auto;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, 17rem);
+  display: grid;
+  gap: 1rem;
+}
+
+/* Cards section*/
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 1rem;
+}
+.card .profile {
+  display: flex;
+}
+.profile .profile-picture {
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.profile .profile-description {
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+}
+#card-one {
+  background-color: var(--card-color-one);
+  grid-column: 1 / span 2;
+}
+#card-two {
+  background-color: var(--card-color-two);
+  grid-column: 3;
+  grid-row: 1;
+}
+#card-three {
+  background-color: var(--white);
+  grid-column: 1;
+  grid-row: 2;
+}
+#card-four {
+  background-color: var(--card-color-three);
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+#card-five {
+  background-color: var(--white);
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

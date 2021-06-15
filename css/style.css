@@ -7,7 +7,8 @@
   --white: hsl(0, 0%, 100%);
 }
 
-/*resets and body*/
+/*neutral 500 600*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,6 +16,19 @@
 }
 body {
   background-color: var(--bg-color);
+}
+h2,
+.highlight {
+  font-weight: 600;
+}
+.highlight {
+  margin-bottom: 1rem;
+}
+h3,
+p {
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
 }
 
 /* Testimonials Section*/
@@ -24,19 +38,27 @@ body {
   width: 95vw;
   margin: 8vh auto 0 auto;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, 17rem);
+  grid-template-rows: repeat(2, 16rem);
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 /* Cards section*/
 .card {
-  border-radius: 5px;
+  border-radius: 12px;
   overflow: hidden;
   padding: 1rem;
 }
 .card .profile {
   display: flex;
+  margin-bottom: 1rem;
+}
+#quotation-marks {
+  position: absolute;
+  padding-right: 4rem;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 .profile .profile-picture {
   border-radius: 50%;
@@ -47,6 +69,7 @@ body {
   margin-top: 0.5rem;
 }
 #card-one {
+  position: relative;
   background-color: var(--card-color-one);
   grid-column: 1 / span 2;
 }
@@ -69,6 +92,10 @@ body {
   background-color: var(--white);
   grid-column: 4;
   grid-row: 1 / span 2;
+}
+
+.white-color {
+  color: var(--white);
 }
 
 .attribution {
